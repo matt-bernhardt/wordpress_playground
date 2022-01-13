@@ -1,0 +1,27 @@
+{
+    "name": "mjbernha/wordpress_playground",
+    "description": "A place to muck around with WordPress as a monolithic site",
+    "authors": [
+        {
+            "name": "Matt Bernhardt",
+            "email": "mjbernha@mit.edu"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.9",
+        "wpackagist-plugin/wp-cfm": "^1.7"
+    },
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+    ],
+    "extra": {
+        "wordpress-install-dir": "wp-app",
+        "installer-paths": {
+            "wp-app/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "wp-app/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+        }
+    }
+}
